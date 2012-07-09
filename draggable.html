@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+	<title>Draggable</title>
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.8.21.custom.min.js"></script>
+	<script type="text/javascript" src="jquery.ui.touch-punch.min.js"></script>
+
+
+	<style>
+		.block {
+			z-index:9999;
+			cursor:move;
+		}
+		
+		.productCode {
+			
+		}
+		
+		li {
+			list-style:none;
+		}
+		tr {
+			border: 2px solid black;
+		}
+		table {
+			border: 2px solid black;
+		}
+		
+		.inputs div {
+			float:left;
+			background-color:#FFFFFF;
+			color:#004E66;
+			font-size:x-large;
+			margin:2px;
+			padding:20px;
+			border:1px solid black;
+		}
+		
+		.spaces td {
+			background-color:#666666;
+			margin:2px;
+			padding:36px;
+			border:2px solid black;
+		}
+	</style>
+</head>
+
+<body>
+	<form id="form1">
+		<div class="inputs">
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>	
+				<div>4</div>
+				<div>5</div>
+				<div>6</div>
+
+		</div>
+		<br/>
+		<table class="spaces">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+
+
+	</form>
+<!-- here we are telling jquery to make each element inside of class 'block' draggable -->
+<script type="text/javascript">
+	$(document).ready(function () {
+		
+
+	$(".inputs div").draggable( {
+		snap: ".spaces"
+		
+	}
+		
+	);	
+		
+	});	
+</script>
